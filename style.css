@@ -80,13 +80,13 @@ body {
     display: none;
   } */
   .container{
-    height: 45vh;
+    height: 90vh;
     width: 90vw;
     flex-direction: column;
   }
 
   .panel{
-    background-size: 100% auto; 
+    background-size: cover; 
     /* margin: 0;
   }
    
