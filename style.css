@@ -41,7 +41,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   color: #fff;
   cursor:pointer;
   margin: 10px;
