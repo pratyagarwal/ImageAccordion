@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+/* This way an element width and height matches exactly whats specified by incorporating padding and border inside the width*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* 
+Specifying the margin as 0
+For both axis alignment we use flex box
+vertical alignment requires a height,otherwise doesnt make sense
+align-items is for cross axis
+justify-content is for main axis
+for row main axis is the horizontal
+Since we have specified a fixed height,the items might overflow so we need to specify a overflow property as well
+
+*/
+
+body {
+  font-family: "Muli", sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+  margin: 0;
+}
+/* Align items means the container will be equally spaced from both sides of screen */
+.container{
+  display: flex;
+  width: 80vw;
+}
+
+/* background size only refers to the image size that will be used but it will only be visible through the panel width and height ,so it doesnt refer to what is visi ble */
+/* Auto means the property will go proportionally */
+.panel{
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor:pointer;
+  margin: 10px;
+  flex: 0.5;
+  /* flex-basis: 100px; */
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h2{
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin:0;
+  opacity: 0;
+}
+
+.panel.active{
+  flex: 5;
+}
+
+.panel.active h2{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+/* flex-basis by default will be based on content size */
+/* flex 0.5 means each item is capable of growing to a maximum of 50% of parent until space is left so if there are more than two items they will have to stop at 33*/
+
+/* screen implies for desktops ,mobiles,tablets */
+
+@media screen and (max-width: 480px) {
+  /* .panel:nth-child(4),.panel:nth-child(5){
+    display: none;
+  } */
+  .container{
+    height: 45vh;
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .panel{
+    background-size: 100% auto; 
+    /* margin: 0;
+  }
+   
+
+
+
+
+
+}
