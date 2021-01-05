@@ -80,7 +80,7 @@ body {
     display: none;
   }
   .container{
-    height: 90vh;
+    height: 70vh;
     width: 90vw;
     flex-direction: column;
   }
